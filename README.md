@@ -14,4 +14,4 @@ Where things live:
 
 ## Hosting
 
-Hosted on Netlify, which deploys the `main` branch automatically using `netlify.toml`. The domain aforashwini.com is registered at Porkbun, with its DNS records pointing to Netlify.
+Hosted on GitHub Pages. Every push to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes `dist/`. The domain aforashwini.com is registered at Porkbun, with its DNS records pointing to GitHub Pages.
