@@ -11,3 +11,7 @@ Where things live:
 - `src/styles.css`: design tokens in the `:root` block at the top, then layout.
 - `src/icons.js`: line-art tile icons and social icons.
 - `public/images/ashwini-bright.jpg`: the brightened portrait.
+
+## Hosting
+
+Hosted on Netlify, which deploys the `main` branch automatically using `netlify.toml`. The domain aforashwini.com is registered at Porkbun, with its DNS records pointing to Netlify.
