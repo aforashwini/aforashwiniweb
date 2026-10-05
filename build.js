@@ -148,12 +148,24 @@ ${o.sessions.map(card).join('\n')}
 </section>`;
 }
 
+function notFoundPage() {
+  const n = content.notFound;
+  return `
+${titleBand(n.title, ' title-band--compact')}
+<section class="email-note">
+  <p>${esc(n.text)} <a href="/">${esc(n.linkLabel)}</a>.</p>
+</section>`;
+}
+
 const pages = [
   { path: '/', current: 'about', meta: content.about.meta, main: aboutPage() },
   { path: '/resources/', current: 'resources', meta: content.resources.meta, main: comingSoonPage(content.resources) },
   { path: '/events/', current: 'events', meta: content.events.meta, main: comingSoonPage(content.events) },
   { path: '/one-to-one/', current: 'one-to-one', meta: content.oneToOne.meta, main: oneToOnePage() },
 ];
+
+// GitHub Pages serves 404.html for any unknown URL.
+const notFound = { path: '/', current: null, meta: content.notFound.meta, main: notFoundPage() };
 
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
@@ -165,5 +177,7 @@ for (const page of pages) {
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, 'index.html'), layout(page));
 }
+
+writeFileSync(join(out, '404.html'), layout(notFound));
 
 console.log(`Built ${pages.length} pages into dist/`);

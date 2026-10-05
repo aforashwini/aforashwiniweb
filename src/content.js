@@ -110,3 +110,13 @@ export const oneToOne = {
     },
   ],
 };
+
+export const notFound = {
+  meta: {
+    title: 'Page not found | Ashwini Deshpande',
+    description: 'This page does not exist.',
+  },
+  title: 'Page not found',
+  text: "This page doesn't exist. Head back to",
+  linkLabel: 'About Me',
+};
