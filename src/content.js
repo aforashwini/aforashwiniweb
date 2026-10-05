@@ -5,10 +5,9 @@ export const site = {
   domain: 'aforashwini.com',
 };
 
-// Placeholder links until the real URLs are added.
 export const social = [
-  { id: 'instagram', label: 'Instagram', href: '#' },
-  { id: 'tiktok', label: 'TikTok', href: '#' },
+  { id: 'instagram', label: 'Instagram', href: 'https://www.instagram.com/aforashwini/' },
+  { id: 'tiktok', label: 'TikTok', href: 'https://www.tiktok.com/@aforashwini' },
 ];
 
 export const booking = {
