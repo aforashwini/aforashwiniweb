@@ -87,6 +87,8 @@ export const oneToOne = {
   },
   title: 'Work With Me 1:1',
   buttonLabel: 'Book this session',
+  // Shown under the sessions for visitors whose device has no email app set up.
+  emailNote: 'Or email me directly at',
   sessions: [
     {
       duration: '1 hour',

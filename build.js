@@ -142,6 +142,9 @@ function oneToOnePage() {
 ${titleBand(o.title)}
 <section class="mosaic sessions" aria-label="Sessions">
 ${o.sessions.map(card).join('\n')}
+</section>
+<section class="email-note">
+  <p>${esc(o.emailNote)} <a href="mailto:${content.bookingEmail}">${esc(content.bookingEmail)}</a></p>
 </section>`;
 }
 

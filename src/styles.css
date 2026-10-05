@@ -446,3 +446,17 @@ img, svg { display: block; max-width: 100%; }
   white-space: nowrap;
   border: 0;
 }
+
+.email-note {
+  padding: clamp(28px, 3vw, 44px) var(--pad);
+  background: var(--blue);
+  font-size: clamp(18px, 1.5vw, 22px);
+  line-height: 1.5;
+}
+.email-note a {
+  font-weight: 600;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+.email-note a:hover { color: var(--blood-deep); }
