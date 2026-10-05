@@ -10,9 +10,17 @@ export const social = [
   { id: 'tiktok', label: 'TikTok', href: 'https://www.tiktok.com/@aforashwini' },
 ];
 
+// "Book this session" opens the visitor's email app with a pre-filled draft.
+export const bookingEmail = 'biz@aforashwini.com';
+
+const mailto = (session) =>
+  `mailto:${bookingEmail}?subject=${encodeURIComponent(`Booking request: ${session}`)}&body=${encodeURIComponent(
+    `Hi Ashwini,\n\nI'm interested in booking your ${session}. Please let me know your availability and next steps.\n\nThank you!`
+  )}`;
+
 export const booking = {
-  aboutMe: '#',
-  consultingCase: '#',
+  aboutMe: mailto('“About Me” Session'),
+  consultingCase: mailto('Consulting Case and Feedback Session'),
 };
 
 export const tabs = [
