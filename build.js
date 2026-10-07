@@ -128,7 +128,7 @@ function oneToOnePage() {
   const priceBlock = (s) => {
     if (!o.offer || !s.offerPrice) return `<p class="price">${esc(s.price)}</p>`;
     return `<div class="price-block">
-        <p class="pill offer-tag">${esc(o.offer.label)}: ${esc(o.offer.detail)}</p>
+        <p class="pill offer-tag">${esc(o.offer.label)}</p>
         <p class="price"><s class="price-was"><span class="visually-hidden">Was </span>${esc(s.price)}</s> <span class="visually-hidden">now </span>${esc(s.offerPrice)}</p>
       </div>`;
   };

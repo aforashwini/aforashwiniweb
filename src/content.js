@@ -90,7 +90,7 @@ export const oneToOne = {
   buttonLabel: 'Book this session',
   // Early bird offer: shows the original price struck out next to the offer price.
   // To end the offer, delete this block and the offerPrice lines below.
-  offer: { label: 'Early bird offer', detail: '15% off' },
+  offer: { label: 'Early bird offer' },
   // Shown under the sessions for visitors whose device has no email app set up.
   emailNote: 'Or email me directly at',
   sessions: [
