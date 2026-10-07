@@ -54,9 +54,9 @@ const layout = ({ meta, current, path, main }) => `<!doctype html>
   <meta property="og:title" content="${esc(meta.title)}">
   <meta property="og:description" content="${esc(meta.description)}">
   <meta property="og:url" content="https://${content.site.domain}${path}">
-  <meta property="og:image" content="https://${content.site.domain}/images/ashwini-bright.jpg">
+  <meta property="og:image" content="https://${content.site.domain}/images/ashwini.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#E4F1FB">
+  <meta name="theme-color" content="#F2EFFB">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap">
@@ -82,9 +82,9 @@ function aboutPage() {
 ${titleBand(a.title, ' title-band--compact')}
 <section class="mosaic" aria-label="Portrait and motto">
   <figure class="tile span-2x2 portrait">
-    <img src="/images/ashwini-bright.jpg" alt="${esc(a.photoAlt)}" width="1290" height="1481" fetchpriority="high">
+    <img src="/images/ashwini.jpg" alt="${esc(a.photoAlt)}" width="1200" height="1492" fetchpriority="high">
   </figure>
-  <div class="tile span-2x2 bg-blush quote-tile">
+  <div class="tile span-2x2 bg-butter quote-tile">
     <blockquote class="pull-quote"><p>${esc(a.quote)}</p></blockquote>
     <p class="pill credit">${esc(a.quoteCredit)}</p>
   </div>
@@ -97,13 +97,13 @@ ${titleBand(a.title, ' title-band--compact')}
     </div>
   </div>
   <div class="icon-stack">
-    ${iconTile('dress', 'bg-blue-2')}
-    ${iconTile('microphone', 'bg-blood')}
-    ${iconTile('cap', 'bg-pink')}
-    ${iconTile('apple', 'bg-blush')}
+    ${iconTile('dress', 'bg-lilac')}
+    ${iconTile('microphone', 'bg-plum')}
+    ${iconTile('cap', 'bg-lemon')}
+    ${iconTile('apple', 'bg-butter')}
   </div>
 </section>
-<section class="closing on-blood">
+<section class="closing on-plum">
   <p>${esc(a.closing.before)}<em>${esc(a.closing.highlight)}</em>${esc(a.closing.after)}</p>
 </section>`;
 }
@@ -114,12 +114,12 @@ function comingSoonPage(page) {
   return `
 ${titleBand(page.title)}
 <section class="mosaic" aria-label="${esc(page.badge)}">
-  <div class="tile span-2 bg-blue-2 soon-tile">
+  <div class="tile span-2 bg-lilac soon-tile">
     <p class="pill badge">${esc(page.badge)}</p>
     <p class="soon-text">${esc(page.text)}</p>
   </div>
-  ${iconTile(first, 'bg-blood')}
-  ${iconTile(second, 'bg-blush')}
+  ${iconTile(first, 'bg-plum')}
+  ${iconTile(second, 'bg-butter')}
 </section>`;
 }
 
@@ -128,13 +128,13 @@ function oneToOnePage() {
   const card = (s) => {
     const dark = s.theme === 'dark';
     return `
-  <article class="tile span-2 session ${dark ? 'bg-blood on-blood' : 'bg-blush'}">
+  <article class="tile span-2 session ${dark ? 'bg-plum on-plum' : 'bg-butter'}">
     <p class="pill duration">${esc(s.duration)}</p>
     <h2 class="session-title">${esc(s.title)}</h2>
     <p class="session-desc">${esc(s.description)}</p>
     <div class="session-foot">
       <p class="price">${esc(s.price)}</p>
-      <a class="button ${dark ? 'button--light' : 'button--blood'}" href="${s.href}">${esc(o.buttonLabel)}<span class="visually-hidden">: ${esc(s.title)}</span></a>
+      <a class="button ${dark ? 'button--light' : 'button--plum'}" href="${s.href}">${esc(o.buttonLabel)}<span class="visually-hidden">: ${esc(s.title)}</span></a>
     </div>
   </article>`;
   };

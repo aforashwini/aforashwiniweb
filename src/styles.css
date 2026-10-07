@@ -1,13 +1,13 @@
 /* Design tokens: colours, fonts and radii live only here. */
 :root {
-  --blue:       #E4F1FB; /* very light blue: page ground, reading bands */
-  --blue-2:     #CBE3F6; /* slightly deeper light blue for tiles */
-  --blush:      #FBDCE2; /* palest pink */
-  --pink:       #F59BB0; /* pink: title bands and big tiles with large type only */
-  --blood:      #A60F1E; /* blood red: all text, solid tiles */
-  --blood-deep: #7E0A16; /* hover state for blood red buttons */
+  --lilac-pale: #F2EFFB; /* palest lilac: page ground, reading bands */
+  --lilac:      #D8D2F3; /* lilac (the jacket): tiles */
+  --butter:     #FAF6D2; /* palest yellow */
+  --lemon:      #E6DF3C; /* chartreuse yellow (the top): title bands, accents */
+  --plum:       #3F2378; /* deep purple: all text, solid tiles */
+  --plum-deep:  #2A1554; /* hover state for purple buttons */
   --white:      #FFFFFF;
-  --hairline:   rgba(166, 15, 30, 0.3);
+  --hairline:   rgba(63, 35, 120, 0.3);
   --display: 'DM Serif Display', 'Times New Roman', serif;
   --body:    'Hanken Grotesk', system-ui, sans-serif;
   --radius-pill: 999px;
@@ -23,8 +23,8 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  background: var(--blue);
-  color: var(--blood);
+  background: var(--lilac-pale);
+  color: var(--plum);
   font-family: var(--body);
   font-size: 18px;
   line-height: 1.5;
@@ -38,10 +38,10 @@ a { color: inherit; }
 img, svg { display: block; max-width: 100%; }
 
 :focus-visible {
-  outline: 2px solid var(--blood);
+  outline: 2px solid var(--plum);
   outline-offset: 3px;
 }
-.on-blood :focus-visible { outline-color: var(--blue); }
+.on-plum :focus-visible { outline-color: var(--lilac-pale); }
 
 .skip-link {
   position: absolute;
@@ -49,8 +49,8 @@ img, svg { display: block; max-width: 100%; }
   top: -100px;
   z-index: 100;
   padding: 10px 18px;
-  background: var(--blood);
-  color: var(--blue);
+  background: var(--plum);
+  color: var(--lilac-pale);
   font-weight: 600;
   border-radius: var(--radius-pill);
   text-decoration: none;
@@ -68,7 +68,7 @@ img, svg { display: block; max-width: 100%; }
   align-items: center;
   gap: 16px;
   padding: 22px var(--pad) 12px;
-  background: var(--blue);
+  background: var(--lilac-pale);
   border-bottom: 1px solid var(--hairline);
 }
 
@@ -113,11 +113,11 @@ img, svg { display: block; max-width: 100%; }
   white-space: nowrap;
   transition: border-color var(--ease), background-color var(--ease), color var(--ease);
 }
-.tabs a:hover { border-color: var(--blood); }
+.tabs a:hover { border-color: var(--plum); }
 .tabs a[aria-current="page"] {
-  background: var(--blood);
-  border-color: var(--blood);
-  color: var(--blue);
+  background: var(--plum);
+  border-color: var(--plum);
+  color: var(--lilac-pale);
 }
 
 .social {
@@ -135,12 +135,12 @@ img, svg { display: block; max-width: 100%; }
   place-items: center;
   width: 56px;
   height: 56px;
-  border: 1.5px solid var(--blood);
+  border: 1.5px solid var(--plum);
   border-radius: 50%;
   transition: background-color var(--ease), color var(--ease);
 }
 .social svg { width: 28px; height: 28px; }
-.social a:hover { background: var(--blood); color: var(--blue); }
+.social a:hover { background: var(--plum); color: var(--lilac-pale); }
 
 /* ---------- Title band (h1 on every page) ---------- */
 
@@ -149,7 +149,7 @@ img, svg { display: block; max-width: 100%; }
   align-items: center;
   min-height: var(--row);
   padding: var(--pad);
-  background: var(--pink);
+  background: var(--lemon);
 }
 
 .page-title {
@@ -180,28 +180,28 @@ img, svg { display: block; max-width: 100%; }
 .span-2 { grid-column: span 2; }
 .span-2x2 { grid-column: span 2; grid-row: span 2; }
 
-.bg-blue   { background: var(--blue); }
-.bg-blue-2 { background: var(--blue-2); }
-.bg-blush  { background: var(--blush); }
-.bg-pink   { background: var(--pink); }
-.bg-blood  { background: var(--blood); color: var(--blush); }
+.bg-lilac-pale { background: var(--lilac-pale); }
+.bg-lilac      { background: var(--lilac); }
+.bg-butter     { background: var(--butter); }
+.bg-lemon      { background: var(--lemon); }
+.bg-plum       { background: var(--plum); color: var(--butter); }
 
 .icon-tile {
   display: grid;
   place-items: center;
-  color: var(--blood);
+  color: var(--plum);
 }
-.icon-tile.bg-blood { color: var(--blue); }
+.icon-tile.bg-plum { color: var(--lemon); }
 .icon-tile svg { width: 44%; height: auto; }
 
 /* ---------- About ---------- */
 
-.portrait { padding: 0; background: var(--blush); }
+.portrait { padding: 0; background: var(--butter); }
 .portrait img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 16%;
+  object-position: 50% 6%;
 }
 
 .quote-tile {
@@ -227,8 +227,8 @@ img, svg { display: block; max-width: 100%; }
 
 .credit {
   padding: 8px 18px;
-  background: var(--blood);
-  color: var(--blue);
+  background: var(--plum);
+  color: var(--lilac-pale);
   font-size: 15px;
   font-weight: 500;
   line-height: 1.4;
@@ -239,7 +239,7 @@ img, svg { display: block; max-width: 100%; }
   grid-template-columns: 3fr 1fr;
   gap: clamp(32px, 8vw, 140px);
   padding: clamp(40px, 4.4vw, 64px) var(--pad);
-  background: var(--blue);
+  background: var(--lilac-pale);
 }
 
 .reading-text { max-width: 46em; }
@@ -267,8 +267,8 @@ img, svg { display: block; max-width: 100%; }
 
 .closing {
   padding: clamp(56px, 8vw, 120px) var(--pad);
-  background: var(--blood);
-  color: var(--blush);
+  background: var(--plum);
+  color: var(--lilac);
 }
 .closing p {
   max-width: 14em;
@@ -278,7 +278,7 @@ img, svg { display: block; max-width: 100%; }
   line-height: 1;
   letter-spacing: -0.015em;
 }
-.closing em { color: var(--blue); font-style: italic; }
+.closing em { color: var(--lemon); font-style: italic; }
 
 /* ---------- Coming soon (Resources, Events) ---------- */
 
@@ -292,7 +292,7 @@ img, svg { display: block; max-width: 100%; }
 
 .badge {
   padding: 0.3em 0.7em;
-  border: 1.5px solid var(--blood);
+  border: 1.5px solid var(--plum);
   font-size: clamp(22px, 2.4vw, 36px);
   font-weight: 500;
   line-height: 1.3;
@@ -313,9 +313,9 @@ img, svg { display: block; max-width: 100%; }
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
-  color: var(--blood);
+  color: var(--plum);
 }
-.session.bg-blood { color: var(--blush); }
+.session.bg-plum { color: var(--butter); }
 
 .duration {
   padding: 4px 14px;
@@ -373,10 +373,10 @@ img, svg { display: block; max-width: 100%; }
 }
 .button:hover { transform: translateY(-2px); }
 
-.button--blood { background: var(--blood); color: var(--blue); }
-.button--blood:hover { background: var(--blood-deep); }
-.button--light { background: var(--blue); color: var(--blood); }
-.button--light:hover { background: var(--white); }
+.button--plum { background: var(--plum); color: var(--lilac-pale); }
+.button--plum:hover { background: var(--plum-deep); }
+.button--light { background: var(--lemon); color: var(--plum); }
+.button--light:hover { background: var(--butter); }
 
 /* ---------- Footer ---------- */
 
@@ -387,7 +387,7 @@ img, svg { display: block; max-width: 100%; }
   justify-content: space-between;
   gap: 12px 24px;
   padding: clamp(32px, 3vw, 44px) var(--pad);
-  background: var(--blush);
+  background: var(--butter);
 }
 .footer-name {
   font-family: var(--display);
@@ -449,7 +449,7 @@ img, svg { display: block; max-width: 100%; }
 
 .email-note {
   padding: clamp(28px, 3vw, 44px) var(--pad);
-  background: var(--blue);
+  background: var(--lilac-pale);
   font-size: clamp(18px, 1.5vw, 22px);
   line-height: 1.5;
 }
@@ -459,4 +459,4 @@ img, svg { display: block; max-width: 100%; }
   overflow-wrap: anywhere;
   user-select: all;
 }
-.email-note a:hover { color: var(--blood-deep); }
+.email-note a:hover { color: var(--plum-deep); }
