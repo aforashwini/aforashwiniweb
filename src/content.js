@@ -110,7 +110,7 @@ export const oneToOne = {
       description:
         'I give you a consulting case, followed by detailed feedback and next steps on how you can achieve perfection.',
       price: '$150',
-      offerPrice: '$127.50',
+      offerPrice: '$125',
       href: booking.consultingCase,
       theme: 'dark',
     },
