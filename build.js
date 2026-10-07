@@ -157,6 +157,7 @@ ${titleBand(pt.title)}
 <section class="mosaic" aria-label="${esc(pt.title)}">
   <div class="tile span-2 bg-lilac soon-tile partner-tile">
     <p class="soon-text">${esc(pt.text)} <a href="${href}">${esc(content.bookingEmail)}</a>.</p>
+    <p class="partner-thanks">${esc(pt.thanks)}</p>
   </div>
   ${iconTile(first, 'bg-plum')}
   ${iconTile(second, 'bg-butter')}

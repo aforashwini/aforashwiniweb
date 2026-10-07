@@ -129,6 +129,7 @@ export const partnerships = {
   },
   title: 'Partnerships',
   text: 'For all paid partnerships, please contact',
+  thanks: 'Thank you!',
   emailSubject: 'Paid partnership enquiry',
   icons: ['envelope', 'sparkle'],
 };
