@@ -460,3 +460,14 @@ img, svg { display: block; max-width: 100%; }
   user-select: all;
 }
 .email-note a:hover { color: var(--plum-deep); }
+
+/* ---------- Partnerships ---------- */
+
+.partner-tile { justify-content: center; }
+.partner-tile .soon-text { font-size: clamp(24px, 2.4vw, 36px); line-height: 1.35; }
+.partner-tile a {
+  font-weight: 600;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+.partner-tile a:hover { color: var(--plum-deep); }

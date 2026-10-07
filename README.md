@@ -1,6 +1,6 @@
 # aforashwini.com
 
-Static site with four deep-linkable pages: `/`, `/resources/`, `/events/`, `/one-to-one/`. No dependencies beyond Node 18+.
+Static site with five deep-linkable pages: `/`, `/resources/`, `/events/`, `/one-to-one/`, `/partnerships/`. No dependencies beyond Node 18+.
 
 - `npm run build` writes the site to `dist/`. Deploy that folder to any static host (Netlify, Vercel, Cloudflare Pages, GitHub Pages).
 - `npm run dev` builds and previews at http://localhost:4321.

@@ -148,6 +148,21 @@ ${o.sessions.map(card).join('\n')}
 </section>`;
 }
 
+function partnershipsPage() {
+  const pt = content.partnerships;
+  const [first, second] = pt.icons;
+  const href = `mailto:${content.bookingEmail}?subject=${encodeURIComponent(pt.emailSubject)}`;
+  return `
+${titleBand(pt.title)}
+<section class="mosaic" aria-label="${esc(pt.title)}">
+  <div class="tile span-2 bg-lilac soon-tile partner-tile">
+    <p class="soon-text">${esc(pt.text)} <a href="${href}">${esc(content.bookingEmail)}</a>.</p>
+  </div>
+  ${iconTile(first, 'bg-plum')}
+  ${iconTile(second, 'bg-butter')}
+</section>`;
+}
+
 function notFoundPage() {
   const n = content.notFound;
   return `
@@ -162,6 +177,7 @@ const pages = [
   { path: '/resources/', current: 'resources', meta: content.resources.meta, main: comingSoonPage(content.resources) },
   { path: '/events/', current: 'events', meta: content.events.meta, main: comingSoonPage(content.events) },
   { path: '/one-to-one/', current: 'one-to-one', meta: content.oneToOne.meta, main: oneToOnePage() },
+  { path: '/partnerships/', current: 'partnerships', meta: content.partnerships.meta, main: partnershipsPage() },
 ];
 
 // GitHub Pages serves 404.html for any unknown URL.

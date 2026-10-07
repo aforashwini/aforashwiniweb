@@ -25,6 +25,12 @@ export const tileIcons = {
   calendar: tile(
     '<rect x="18" y="24" width="64" height="58" rx="6"/><path d="M18 38 L82 38"/><path d="M34 16 L34 30"/><path d="M66 16 L66 30"/><circle cx="36" cy="54" r="2.6"/><circle cx="50" cy="54" r="2.6"/><circle cx="64" cy="54" r="2.6"/><circle cx="36" cy="68" r="2.6"/><circle cx="50" cy="68" r="2.6"/>'
   ),
+  envelope: tile(
+    '<rect x="14" y="26" width="72" height="50" rx="5"/><path d="M16 30 L50 56 L84 30"/>'
+  ),
+  sparkle: tile(
+    '<path d="M50 14 Q54 46 86 50 Q54 54 50 86 Q46 54 14 50 Q46 46 50 14 Z"/><path d="M78 16 Q79 23 86 24 Q79 25 78 32 Q77 25 70 24 Q77 23 78 16 Z"/>'
+  ),
   pin: tile(
     '<path d="M50 88 Q24 56 24 40 Q24 14 50 14 Q76 14 76 40 Q76 56 50 88 Z"/><circle cx="50" cy="38" r="10"/>'
   ),

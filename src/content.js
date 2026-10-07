@@ -28,6 +28,7 @@ export const tabs = [
   { id: 'resources', label: 'Resources', href: '/resources/' },
   { id: 'events', label: 'Events', href: '/events/' },
   { id: 'one-to-one', label: '1:1 With Me', href: '/one-to-one/' },
+  { id: 'partnerships', label: 'Partnerships', href: '/partnerships/' },
 ];
 
 export const about = {
@@ -119,4 +120,15 @@ export const notFound = {
   title: 'Page not found',
   text: "This page doesn't exist. Head back to",
   linkLabel: 'About Me',
+};
+
+export const partnerships = {
+  meta: {
+    title: 'Partnerships | Ashwini Deshpande',
+    description: 'For all paid partnerships with Ashwini Deshpande, contact biz@aforashwini.com.',
+  },
+  title: 'Partnerships',
+  text: 'For all paid partnerships, please contact',
+  emailSubject: 'Paid partnership enquiry',
+  icons: ['envelope', 'sparkle'],
 };
