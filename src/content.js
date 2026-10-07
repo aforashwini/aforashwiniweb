@@ -88,6 +88,9 @@ export const oneToOne = {
   },
   title: 'Work With Me 1:1',
   buttonLabel: 'Book this session',
+  // Early bird offer: shows the original price struck out next to the offer price.
+  // To end the offer, delete this block and the offerPrice lines below.
+  offer: { label: 'Early bird offer', detail: '15% off' },
   // Shown under the sessions for visitors whose device has no email app set up.
   emailNote: 'Or email me directly at',
   sessions: [
@@ -97,6 +100,7 @@ export const oneToOne = {
       description:
         'I help you refine your "about me" for interviews and all other purposes, so you can show up as your best self.',
       price: '$100',
+      offerPrice: '$85',
       href: booking.aboutMe,
       theme: 'light',
     },
@@ -106,6 +110,7 @@ export const oneToOne = {
       description:
         'I give you a consulting case, followed by detailed feedback and next steps on how you can achieve perfection.',
       price: '$150',
+      offerPrice: '$127.50',
       href: booking.consultingCase,
       theme: 'dark',
     },

@@ -125,6 +125,13 @@ ${titleBand(page.title)}
 
 function oneToOnePage() {
   const o = content.oneToOne;
+  const priceBlock = (s) => {
+    if (!o.offer || !s.offerPrice) return `<p class="price">${esc(s.price)}</p>`;
+    return `<div class="price-block">
+        <p class="pill offer-tag">${esc(o.offer.label)}: ${esc(o.offer.detail)}</p>
+        <p class="price"><s class="price-was"><span class="visually-hidden">Was </span>${esc(s.price)}</s> <span class="visually-hidden">now </span>${esc(s.offerPrice)}</p>
+      </div>`;
+  };
   const card = (s) => {
     const dark = s.theme === 'dark';
     return `
@@ -133,7 +140,7 @@ function oneToOnePage() {
     <h2 class="session-title">${esc(s.title)}</h2>
     <p class="session-desc">${esc(s.description)}</p>
     <div class="session-foot">
-      <p class="price">${esc(s.price)}</p>
+      ${priceBlock(s)}
       <a class="button ${dark ? 'button--light' : 'button--plum'}" href="${s.href}">${esc(o.buttonLabel)}<span class="visually-hidden">: ${esc(s.title)}</span></a>
     </div>
   </article>`;
