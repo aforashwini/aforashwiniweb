@@ -2,8 +2,8 @@
 :root {
   --lilac-pale: #F2EFFB; /* palest lilac: page ground, reading bands */
   --lilac:      #D8D2F3; /* lilac (the jacket): tiles */
-  --butter:     #FFF8D9; /* palest canary */
-  --lemon:      #FFE53B; /* canary yellow: title bands, accents */
+  --butter:     #FCF7D5; /* palest yellow */
+  --lemon:      #F2E23C; /* soft canary yellow: title bands, accents */
   --plum:       #3F2378; /* deep purple: all text, solid tiles */
   --plum-deep:  #2A1554; /* hover state for purple buttons */
   --white:      #FFFFFF;
