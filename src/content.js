@@ -137,4 +137,12 @@ export const partnerships = {
   thanks: 'Thank you!',
   emailSubject: 'Paid partnership enquiry',
   icons: ['envelope', 'sparkle'],
+  // Affiliate links: add more entries to this list to show more links.
+  affiliateHeading: 'Affiliate links',
+  affiliates: [
+    {
+      text: 'This platform helped me crack GMAT',
+      href: 'https://targettestprep.referralrock.com/l/1ASHWINIDES71',
+    },
+  ],
 };

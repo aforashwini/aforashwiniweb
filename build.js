@@ -168,6 +168,14 @@ ${titleBand(pt.title)}
   </div>
   ${iconTile(first, 'bg-plum')}
   ${iconTile(second, 'bg-butter')}
+</section>
+<section class="affiliates" aria-labelledby="affiliates-heading">
+  <h2 id="affiliates-heading" class="affiliates-heading">${esc(pt.affiliateHeading)}</h2>
+  <ul>
+    ${pt.affiliates
+      .map((a) => `<li><a href="${a.href}" target="_blank" rel="sponsored noopener">${esc(a.text)}</a></li>`)
+      .join('\n    ')}
+  </ul>
 </section>`;
 }
 
