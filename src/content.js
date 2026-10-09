@@ -60,12 +60,129 @@ export const resources = {
   meta: {
     title: 'Resources | Ashwini Deshpande',
     description:
-      'Coming soon: consulting interview prep videos, public speaking tips and more from Ashwini Deshpande.',
+      'Consulting case interview preparation videos from Ashwini Deshpande: frameworks, case math, exhibits, communication and more.',
   },
   title: 'Resources',
-  badge: 'Coming soon',
-  text: 'Consulting interview prep videos, public speaking tips and more.',
-  icons: ['play', 'book'],
+  // Each collection opens and closes when clicked. Videos are numbered "Video link 1, 2, 3..."
+  // straight through the whole collection. Add a link to a list to add a video.
+  videoLabel: 'Video link',
+  collections: [
+    {
+      title: 'Consulting case interview preparation',
+      sections: [
+        {
+          title: 'How many cases do you need to do to be “ready”?',
+          videos: [
+            'https://www.instagram.com/reel/DP4OQ4tjne_/?vrfl=MXMxNXJsb2lqenBrNw==',
+            'https://www.instagram.com/reel/DQ0XhCHDBEL/?dlrf=MTlybjh1ZzFqZm82aA==',
+          ],
+        },
+        {
+          title: 'Reaction & clarifying questions',
+          videos: [
+            'https://www.instagram.com/reel/DPzDSJtDgEQ/?dlrf=d3gzaGcwamhpdnkw',
+          ],
+        },
+        {
+          title: '4 week plan to master casing',
+          videos: [
+            'https://www.instagram.com/reel/DRa9PdFjJ5S/?psln=ZDJvcHhkMjJyZHE3',
+            'https://www.instagram.com/reel/DRdkVW4jI0R/?vrfl=MWF5YTltc3I0ZmNldg==',
+          ],
+        },
+        {
+          title: 'Feedback and getting better at casing',
+          videos: [
+            'https://www.instagram.com/reel/DP9QGIfDJ0Z/?rpxt=MWx0OWVqcHpoZGU0aQ==',
+          ],
+        },
+        {
+          title: 'Framework fundamentals',
+          videos: [
+            'https://www.instagram.com/reel/DQBDDR6DKBF/?rpxt=cWtvbzRoM2h3anZo',
+            'https://www.instagram.com/reel/DQVrcfjjBcZ/?rpxt=MWFrcnZ6emM2bWRyaA==',
+            'https://www.instagram.com/reel/DRw-oRoEloR/?vrfl=dnBzZDl3ZTd4cGJz',
+          ],
+        },
+        {
+          title: 'Framework examples',
+          videos: [
+            'https://www.instagram.com/reel/DROSvIzDHqV/?srtk=MTh6bWpteXZ0cjk2aw==',
+            'https://www.instagram.com/reel/DRiwvWUEhCN/?obrf=MXRicWN2d2dzOXhqNg==',
+          ],
+        },
+        {
+          title: 'Chart clearing/ exhibits',
+          videos: [
+            'https://www.instagram.com/reel/DSC4Io1jItI/?mdxt=d25keHVucnY4YmM3',
+          ],
+        },
+        {
+          title: 'Case math',
+          videos: [
+            'https://www.instagram.com/reel/DR4hO26Eu43/?vrfl=bG1rYmRsN3huOWdy',
+            'https://www.instagram.com/reel/DR9ogl2Enpk/?psln=ZTJsdXFndmlhY3R4',
+            'https://www.instagram.com/reel/DSBl99yCHiO/?dlrf=bnlwaTJncGhibWRn',
+          ],
+        },
+        {
+          title: 'How to be more memorable while networking',
+          videos: [
+            'https://www.instagram.com/reel/DQE7cMBjh8K/?vrfl=MXJ6cWZ4MWpkb3g4Mg==',
+          ],
+        },
+        {
+          title: 'Nailing the recommendation',
+          videos: [
+            'https://www.instagram.com/reel/DQauJ8xkcwP/?xtok=MWdueXh2NDlhdTFwbA==',
+          ],
+        },
+        {
+          title: 'Communication during a case interview',
+          videos: [
+            'https://www.instagram.com/reel/DQo8mpkjlo4/?psln=MTJla2NnMXFiYTM1eA==',
+            'https://www.instagram.com/reel/DQ8Jm2mDJqy/?vrfl=MmgxamE2aXZqZzBh',
+            'https://www.instagram.com/reel/DRBaboxDGoI/?exln=MTJnb3pvbmNnZXVmMA==',
+          ],
+        },
+        {
+          title: '24h before your interview, do this',
+          videos: [
+            'https://www.instagram.com/reel/DS2tqelEuGN/?exln=MXh3bDNmODVwMXY2cQ==',
+          ],
+        },
+        {
+          title: 'Common mistakes',
+          videos: [
+            'https://www.instagram.com/reel/DSjRApTkty2/?cplk=MXAzbnkwa2pkaXAzMA==',
+            'https://www.instagram.com/reel/DSodKLsEneT/?cplk=dXhncXI5aTEwd2xj',
+          ],
+        },
+        {
+          title: 'The perfect consulting resume',
+          videos: [
+            'https://www.instagram.com/reel/DQKHf_JDv2E/?obrf=ZDJqOGE2cnpla3A1',
+          ],
+        },
+        {
+          title: 'Extra tips',
+          videos: [
+            'https://www.instagram.com/reel/DQs5rIhDFGL/?exln=bG1mZnhqNjdzd3A=',
+            'https://www.instagram.com/reel/DRf242UDERy/?exln=MTljdXJnNTBxYmhnMA==',
+            'https://www.instagram.com/reel/DSxmxfZkoyE/?cplk=MTFtcTdocThjMW13dA==',
+            'https://www.instagram.com/reel/DS0O6gwEtco/?obrf=MXZyMW1jdmFleHBpcA==',
+            'https://www.instagram.com/p/DQerARujobv/?xtok=MXQwd3h3eThpa2Zraw==',
+          ],
+        },
+        {
+          title: 'Complete guide',
+          videos: [
+            'https://www.instagram.com/p/DSt5tNpkp9x/?cplk=cG84Mmx6M3B0b2li',
+          ],
+        },
+      ],
+    },
+  ],
 };
 
 export const events = {

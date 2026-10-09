@@ -527,3 +527,104 @@ img, svg { display: block; max-width: 100%; }
 }
 .affiliates a::after { content: "\00a0\2197"; }
 .affiliates a:hover { color: var(--plum-deep); }
+
+/* ---------- Resources: expandable collections ---------- */
+
+.collection { background: var(--lilac-pale); }
+.collection + .collection { border-top: 1px solid var(--hairline); }
+
+.collection summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  padding: clamp(28px, 3.4vw, 52px) var(--pad);
+  background: var(--lilac);
+  cursor: pointer;
+  list-style: none;
+  transition: background-color var(--ease);
+}
+.collection summary::-webkit-details-marker { display: none; }
+.collection summary:hover { background: var(--butter); }
+
+.collection-title {
+  flex: 1 1 14em;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(32px, 4vw, 60px);
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+}
+
+.collection-count {
+  padding: 6px 14px;
+  border: 1.5px solid var(--plum);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* A plus that turns into a minus when open. */
+.collection-toggle {
+  position: relative;
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--plum);
+}
+.collection-toggle::before,
+.collection-toggle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 2px;
+  margin: -1px 0 0 -11px;
+  background: var(--lemon);
+  transition: transform var(--ease);
+}
+.collection-toggle::after { transform: rotate(90deg); }
+.collection[open] .collection-toggle::after { transform: rotate(0deg); }
+
+.collection-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: clamp(28px, 3vw, 44px) clamp(24px, 3vw, 48px);
+  padding: clamp(32px, 4vw, 64px) var(--pad);
+}
+
+.video-group {
+  padding-top: 16px;
+  border-top: 1.5px solid var(--plum);
+}
+.video-group h3 {
+  margin: 0 0 14px;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(22px, 1.9vw, 28px);
+  line-height: 1.15;
+}
+.video-group ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.video-group a {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 16px;
+  border: 1.5px solid var(--plum);
+  border-radius: var(--radius-pill);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color var(--ease), color var(--ease);
+}
+.video-group a::after { content: "\00a0\2197"; }
+.video-group a:hover { background: var(--plum); color: var(--lemon); }

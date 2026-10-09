@@ -108,7 +108,43 @@ ${titleBand(a.title, ' title-band--compact')}
 </section>`;
 }
 
-// Resources and Events share one layout. Replace the soon-tile row with a card grid when content arrives.
+// Resources: each collection is a native <details> panel, so it opens and closes without JavaScript.
+function resourcesPage() {
+  const r = content.resources;
+  const collection = (c) => {
+    let n = 0;
+    const total = c.sections.reduce((sum, sec) => sum + sec.videos.length, 0);
+    const groups = c.sections
+      .map(
+        (sec) => `
+      <div class="video-group">
+        <h3>${esc(sec.title)}</h3>
+        <ul>
+          ${sec.videos
+            .map((href) => `<li><a href="${esc(href)}" target="_blank" rel="noopener">${esc(r.videoLabel)} ${++n}</a></li>`)
+            .join('\n          ')}
+        </ul>
+      </div>`
+      )
+      .join('');
+    return `
+  <details class="collection">
+    <summary>
+      <h2 class="collection-title">${esc(c.title)}</h2>
+      <span class="pill collection-count">${total} videos</span>
+      <span class="collection-toggle" aria-hidden="true"></span>
+    </summary>
+    <div class="collection-body">${groups}
+    </div>
+  </details>`;
+  };
+  return `
+${titleBand(r.title)}
+<section class="collections" aria-label="${esc(r.title)}">${r.collections.map(collection).join('')}
+</section>`;
+}
+
+// Events uses this layout. Replace the soon-tile row with a card grid when content arrives. Replace the soon-tile row with a card grid when content arrives.
 function comingSoonPage(page) {
   const [first, second] = page.icons;
   return `
@@ -190,7 +226,7 @@ ${titleBand(n.title, ' title-band--compact')}
 
 const pages = [
   { path: '/', current: 'about', meta: content.about.meta, main: aboutPage() },
-  { path: '/resources/', current: 'resources', meta: content.resources.meta, main: comingSoonPage(content.resources) },
+  { path: '/resources/', current: 'resources', meta: content.resources.meta, main: resourcesPage() },
   { path: '/events/', current: 'events', meta: content.events.meta, main: comingSoonPage(content.events) },
   { path: '/one-to-one/', current: 'one-to-one', meta: content.oneToOne.meta, main: oneToOnePage() },
   { path: '/partnerships/', current: 'partnerships', meta: content.partnerships.meta, main: partnershipsPage() },
