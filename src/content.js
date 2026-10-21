@@ -13,9 +13,12 @@ export const social = [
 // "Book this session" opens the visitor's email app with a pre-filled draft.
 export const bookingEmail = 'biz@aforashwini.com';
 
+// Plain-text emails can't use colours or bold, so capitals and the pointing hand make this line stand out.
+const timeZonePrompt = '👉 MY CITY / TIME ZONE: [PLEASE ENTER YOUR CITY OR TIME ZONE HERE]';
+
 const mailto = (session) =>
   `mailto:${bookingEmail}?subject=${encodeURIComponent(`Booking request: ${session}`)}&body=${encodeURIComponent(
-    `Hi Ashwini,\n\nI'm interested in booking your ${session}. Please let me know your availability and next steps.\n\nThank you!`
+    `Hi Ashwini,\n\nI'm interested in booking your ${session}.\n\n${timeZonePrompt}\n\nPlease let me know your availability and next steps.\n\nThank you!`
   )}`;
 
 export const booking = {
