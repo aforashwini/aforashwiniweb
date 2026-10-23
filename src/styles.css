@@ -628,3 +628,110 @@ img, svg { display: block; max-width: 100%; }
 }
 .video-group a::after { content: "\00a0\2197"; }
 .video-group a:hover { background: var(--plum); color: var(--lemon); }
+
+/* ---------- 1:1 testimonials ---------- */
+
+.testimonials {
+  padding: clamp(48px, 6vw, 96px) var(--pad);
+  background: var(--plum);
+  color: var(--butter);
+}
+.testimonials :focus-visible { outline-color: var(--lemon); }
+
+.testimonials-title {
+  margin-bottom: clamp(28px, 3.4vw, 52px);
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(44px, 6vw, 92px);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  color: var(--lemon);
+}
+
+.testimonial {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: clamp(32px, 6vw, 96px);
+  margin: 0;
+}
+.testimonial + .testimonial {
+  margin-top: clamp(48px, 5vw, 80px);
+  padding-top: clamp(48px, 5vw, 80px);
+  border-top: 1px solid rgba(252, 247, 213, 0.3);
+}
+
+.testimonial-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.testimonial-highlight {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(30px, 3.2vw, 48px);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  color: var(--lilac);
+}
+
+.testimonial figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+}
+.testimonial-name {
+  font-family: var(--display);
+  font-size: 28px;
+  line-height: 1;
+  color: var(--lemon);
+}
+.testimonial-session {
+  padding: 4px 14px;
+  border: 1.5px solid currentColor;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.testimonial-body {
+  max-width: 40em;
+  margin: 0;
+  font-size: clamp(18px, 1.4vw, 21px);
+  line-height: 1.7;
+}
+.testimonial-body p + p,
+.testimonial-more div p + p { margin-top: 1em; }
+
+.testimonial-more summary {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  margin-top: 24px;
+  padding: 0 24px;
+  border-radius: var(--radius-pill);
+  background: var(--lemon);
+  color: var(--plum);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  list-style: none;
+  transition: background-color var(--ease), transform var(--ease);
+}
+.testimonial-more summary::-webkit-details-marker { display: none; }
+.testimonial-more summary:hover { background: var(--butter); transform: translateY(-2px); }
+.testimonial-more .when-open,
+.testimonial-more[open] .when-closed { display: none; }
+.testimonial-more[open] .when-open { display: inline; }
+.testimonial-more[open] summary { margin-bottom: 24px; }
+
+@media (min-width: 761px) {
+  /* Keeps the quote in view beside the long text, just under the sticky header. */
+  .testimonial-side { position: sticky; top: 200px; align-self: start; }
+}
+
+@media (max-width: 760px) {
+  .testimonial { grid-template-columns: 1fr; }
+}

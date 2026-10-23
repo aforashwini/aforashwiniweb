@@ -235,6 +235,31 @@ export const oneToOne = {
       theme: 'dark',
     },
   ],
+  // Testimonials under the sessions. The highlight is shown large; the first `preview`
+  // paragraphs are always visible and the rest open with "Read the full testimonial".
+  testimonialsTitle: 'Testimonials',
+  testimonials: [
+    {
+      name: 'Anonymous',
+      session: '“About Me” Session',
+      highlight: 'What makes Ashwini exceptional is her ability to uncover a story you didn\'t even realize you had.',
+      preview: 1,
+      paragraphs: [
+        'I\'ve been following Ashwini\'s Instagram page for a while, so when I saw that she had started offering 1:1 sessions for crafting your "About Me" story and case interview preparation, I was genuinely excited. I booked the "About Me" session, and I can confidently say it was one of the best investments I\'ve made in my MBA recruiting journey.',
+        'What makes Ashwini exceptional is her ability to uncover a story you didn\'t even realize you had.',
+        'She started by listening to the introduction I\'d been using in my coffee chats. Then, instead of immediately jumping into edits, she encouraged me to forget about time limits and simply talk about myself—my background, my experiences, my challenges, and the moments that had shaped me. I ended up sharing so much more than I normally would.',
+        'And this is where the magic happened.',
+        'Ashwini listened incredibly attentively, connected dots I had never connected myself, and identified a powerful, unifying theme that tied together my personal journey, professional experiences, and future aspirations. She didn\'t just polish my introduction; she completely transformed the way I see and tell my own story.',
+        'What I appreciated most was how hands-on and collaborative the entire experience was. She actually talked me through my introduction, demonstrated how different parts could flow together, and helped me identify the most impactful details to include. We worked through the narrative together, making sure every word felt authentic to who I am. By the end, I walked away with something far more valuable than a polished script: a clear understanding of my personal brand and the confidence to communicate it.',
+        'And the results have been incredible.',
+        'I\'ve had three coffee chats since my session with Ashwini, and they\'ve genuinely been my best conversations yet. My introduction now has a central theme, a natural flow, and so many interesting threads that interviewers can choose to explore. Instead of feeling like I\'m reciting my résumé, I feel like I\'m telling a story that people actually want to hear. More importantly, I feel confident guiding the conversation because I know my story inside out.',
+        'I genuinely cannot emphasize enough how much this one session has helped me. If you\'re preparing for coffee chats, interviews, or even just trying to figure out how to tell your story in a way that truly represents you, please do yourself a favor and book a session with Ashwini.',
+        'Don\'t overthink the investment or wait until you\'re deep into recruiting. The earlier you do it, the more you\'ll benefit from it.',
+        'You\'ll thank me for the recommendation, but more importantly, you\'ll thank Ashwini.',
+        'Hands down, one of the best investments you can make in yourself and your recruiting journey!',
+      ],
+    },
+  ],
 };
 
 export const notFound = {

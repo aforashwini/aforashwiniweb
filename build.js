@@ -188,6 +188,42 @@ ${o.sessions.map(card).join('\n')}
 </section>
 <section class="email-note">
   <p>${esc(o.emailNote)} <a href="mailto:${content.bookingEmail}">${esc(content.bookingEmail)}</a></p>
+</section>
+${testimonials(o)}`;
+}
+
+function testimonials(o) {
+  if (!o.testimonials?.length) return '';
+  const paras = (list) => list.map((p) => `<p>${esc(p)}</p>`).join('\n          ');
+  const item = (t) => {
+    const shown = t.paragraphs.slice(0, t.preview);
+    const rest = t.paragraphs.slice(t.preview);
+    return `
+  <figure class="testimonial">
+    <div class="testimonial-side">
+      <p class="testimonial-highlight" aria-hidden="true">“${esc(t.highlight)}”</p>
+      <figcaption>
+        <span class="testimonial-name">${esc(t.name)}</span>
+        <span class="pill testimonial-session">${esc(t.session)}</span>
+      </figcaption>
+    </div>
+    <blockquote class="testimonial-body">
+      ${paras(shown)}${
+        rest.length
+          ? `
+      <details class="testimonial-more">
+        <summary><span class="when-closed">Read the full testimonial</span><span class="when-open">Show less</span></summary>
+        <div>
+          ${paras(rest)}
+        </div>
+      </details>`
+          : ''
+      }
+    </blockquote>
+  </figure>`;
+  };
+  return `<section class="testimonials" aria-labelledby="testimonials-title">
+  <h2 id="testimonials-title" class="testimonials-title">${esc(o.testimonialsTitle)}</h2>${o.testimonials.map(item).join('')}
 </section>`;
 }
 
