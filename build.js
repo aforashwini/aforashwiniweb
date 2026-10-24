@@ -195,17 +195,28 @@ ${testimonials(o)}`;
 function testimonials(o) {
   if (!o.testimonials?.length) return '';
   const paras = (list) => list.map((p) => `<p>${esc(p)}</p>`).join('\n          ');
+  const caption = (t) => `
+      <figcaption>
+        <span class="testimonial-name">${esc(t.name)}</span>${t.role ? `
+        <span class="testimonial-role">${esc(t.role)}</span>` : ''}${t.session ? `
+        <span class="pill testimonial-session">${esc(t.session)}</span>` : ''}
+      </figcaption>`;
   const item = (t) => {
+    // A short testimonial is shown whole, as the big quote.
+    if (!t.paragraphs) {
+      return `
+  <figure class="testimonial testimonial--short">
+    <div class="testimonial-side">
+      <blockquote class="testimonial-highlight"><p>“${esc(t.quote)}”</p></blockquote>${caption(t)}
+    </div>
+  </figure>`;
+    }
     const shown = t.paragraphs.slice(0, t.preview);
     const rest = t.paragraphs.slice(t.preview);
     return `
   <figure class="testimonial">
     <div class="testimonial-side">
-      <p class="testimonial-highlight" aria-hidden="true">“${esc(t.highlight)}”</p>
-      <figcaption>
-        <span class="testimonial-name">${esc(t.name)}</span>
-        <span class="pill testimonial-session">${esc(t.session)}</span>
-      </figcaption>
+      <p class="testimonial-highlight" aria-hidden="true">“${esc(t.highlight)}”</p>${caption(t)}
     </div>
     <blockquote class="testimonial-body">
       ${paras(shown)}${

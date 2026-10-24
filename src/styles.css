@@ -735,3 +735,15 @@ img, svg { display: block; max-width: 100%; }
 @media (max-width: 760px) {
   .testimonial { grid-template-columns: 1fr; }
 }
+
+.testimonial--short { grid-template-columns: 1fr; }
+.testimonial--short .testimonial-side { position: static; }
+.testimonial--short .testimonial-highlight { max-width: 26em; margin: 0; }
+.testimonial-role {
+  flex-basis: 100%;
+  order: 1;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--lilac);
+}
+.testimonial-session { order: 0; }

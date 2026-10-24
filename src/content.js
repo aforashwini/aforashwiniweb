@@ -235,8 +235,9 @@ export const oneToOne = {
       theme: 'dark',
     },
   ],
-  // Testimonials under the sessions. The highlight is shown large; the first `preview`
+  // Testimonials under the sessions. Long ones: the highlight is shown large, the first `preview`
   // paragraphs are always visible and the rest open with "Read the full testimonial".
+  // Short ones: give just `quote` and it is shown whole as the big quote. `role` and `session` are optional.
   testimonialsTitle: 'Testimonials',
   testimonials: [
     {
@@ -258,6 +259,12 @@ export const oneToOne = {
         'You\'ll thank me for the recommendation, but more importantly, you\'ll thank Ashwini.',
         'Hands down, one of the best investments you can make in yourself and your recruiting journey!',
       ],
+    },
+    {
+      name: 'Vivek Ranganathan',
+      role: 'Kellogg MBA ’27 · Bain, San Francisco',
+      quote:
+        "Ashwini's coaching was critical in landing me an MBB offer! Her sessions guided me on what to include in my story but also how best to tell it. Thanks to her I entered my interview with confidence instead of anxiety.",
     },
   ],
 };
