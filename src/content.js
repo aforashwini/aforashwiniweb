@@ -266,6 +266,19 @@ export const oneToOne = {
       quote:
         "Ashwini's coaching was critical in landing me an MBB offer! Her sessions guided me on what to include in my story but also how best to tell it. Thanks to her I entered my interview with confidence instead of anxiety.",
     },
+    {
+      name: 'Anonymous',
+      session: '“About Me” Session',
+      highlight: 'I walked out of my session with Ashwini feeling incredible about my intro pitch.',
+      preview: 2,
+      paragraphs: [
+        'Ashwini is incredible at tying all the critical elements of your personal and professional life story beautifully in a brief 2-3 minute pitch.',
+        'Her pointed questions make you think about your values, the highlights of your life that define you and she does a great job at helping you articulate them powerfully and succinctly.',
+        'I walked out of my session with Ashwini feeling incredible about my intro pitch. I think my new intro truly describes who I am, what matters to me and WHY. She\'s great at helping you articulate your why - which is very powerful!',
+        'I definitely believe that this goes beyond just recruiting/networking but also is a great session to put your WHY in words, as that intentionality helps you choose and structure your academic and professional journey in alignment with your why!',
+        'Definitely recommend making this investment for yourself. Whatever stage of life you\'re at, recommend you to book some time with Ashwini and do this exercise with her!',
+      ],
+    },
   ],
 };
 
