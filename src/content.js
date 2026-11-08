@@ -225,12 +225,12 @@ export const oneToOne = {
       theme: 'light',
     },
     {
-      duration: '1.5 hours',
+      duration: '1 hour',
       title: 'Consulting Case and Feedback Session',
       description:
         'I give you a consulting case, followed by detailed feedback and next steps on how you can achieve perfection.',
-      price: '$150',
-      offerPrice: '$125',
+      price: '$100',
+      offerPrice: '$85',
       href: booking.consultingCase,
       theme: 'dark',
     },
