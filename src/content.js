@@ -192,9 +192,35 @@ export const events = {
   meta: {
     title: 'Events | Ashwini Deshpande',
     description:
-      'Coming soon: upcoming talks, workshops and meetups with Ashwini Deshpande.',
+      'Upcoming talks, workshops and meetups with Ashwini Deshpande, including Top US/EU MBAs Decoded in Bengaluru.',
   },
   title: 'Events',
+  // Upcoming events, newest first. Remove an event once it has passed.
+  // When the list is empty, the "Coming soon" row below is shown instead.
+  upcomingHeading: 'Upcoming',
+  registerLabel: 'Register now',
+  upcoming: [
+    {
+      title: 'Top US/EU MBAs Decoded',
+      tagline: 'Hear from 2 recent grads → turned tier 1 mgmt consultants',
+      poster: '/images/events/top-mbas-decoded.jpg',
+      posterWidth: 1414,
+      posterHeight: 2000,
+      posterAlt:
+        'Event poster for Top US/EU MBAs Decoded with Devyangana Sagar, IESE Business School ’26, and Ashwini Deshpande, Kellogg SOM ’26.',
+      speakers: [
+        { name: 'Devyangana Sagar', school: 'IESE Business School ’26', handle: '@devyanganasagar' },
+        { name: 'Ashwini Deshpande', school: 'Kellogg SOM ’26', handle: '@aforashwini' },
+      ],
+      date: 'Saturday, 21 November 2026',
+      time: '2 to 3:30 PM',
+      location: 'Kaikondrahalli, Sarjapur Road, Bengaluru',
+      price: '₹499',
+      note: 'Snacks included. Limited spots available.',
+      // Taken from the QR code on the poster.
+      registerHref: 'https://q.me-qr.com/52tojrmy',
+    },
+  ],
   badge: 'Coming soon',
   text: 'Upcoming talks, workshops and meetups will be listed here.',
   icons: ['calendar', 'pin'],

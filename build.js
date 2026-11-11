@@ -159,6 +159,40 @@ ${titleBand(page.title)}
 </section>`;
 }
 
+function eventsPage() {
+  const e = content.events;
+  if (!e.upcoming?.length) return comingSoonPage(e);
+  const fact = (label, value) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`;
+  const event = (ev) => `
+  <article class="event">
+    <a class="event-poster" href="${ev.poster}" target="_blank" rel="noopener">
+      <img src="${ev.poster}" alt="${esc(ev.posterAlt)}" width="${ev.posterWidth}" height="${ev.posterHeight}">
+    </a>
+    <div class="event-info">
+      <h3 class="event-title">${esc(ev.title)}</h3>
+      <p class="event-tagline">${esc(ev.tagline)}</p>
+      <ul class="event-speakers">
+        ${ev.speakers
+          .map((sp) => `<li><span class="event-speaker">${esc(sp.name)}</span> <span class="pill event-school">${esc(sp.school)}</span></li>`)
+          .join('\n        ')}
+      </ul>
+      <dl class="event-facts">
+        ${fact('Date', ev.date)}
+        ${fact('Time', ev.time)}
+        ${fact('Where', ev.location)}
+        ${fact('Price', ev.price)}
+      </dl>
+      <p class="event-note">${esc(ev.note)}</p>
+      <a class="button button--plum" href="${esc(ev.registerHref)}" target="_blank" rel="noopener">${esc(e.registerLabel)}<span class="visually-hidden">: ${esc(ev.title)}</span></a>
+    </div>
+  </article>`;
+  return `
+${titleBand(e.title)}
+<section class="events" aria-labelledby="upcoming-heading">
+  <h2 id="upcoming-heading" class="events-heading">${esc(e.upcomingHeading)}</h2>${e.upcoming.map(event).join('')}
+</section>`;
+}
+
 function oneToOnePage() {
   const o = content.oneToOne;
   const priceBlock = (s) => {
@@ -274,7 +308,7 @@ ${titleBand(n.title, ' title-band--compact')}
 const pages = [
   { path: '/', current: 'about', meta: content.about.meta, main: aboutPage() },
   { path: '/resources/', current: 'resources', meta: content.resources.meta, main: resourcesPage() },
-  { path: '/events/', current: 'events', meta: content.events.meta, main: comingSoonPage(content.events) },
+  { path: '/events/', current: 'events', meta: content.events.meta, main: eventsPage() },
   { path: '/one-to-one/', current: 'one-to-one', meta: content.oneToOne.meta, main: oneToOnePage() },
   { path: '/partnerships/', current: 'partnerships', meta: content.partnerships.meta, main: partnershipsPage() },
 ];

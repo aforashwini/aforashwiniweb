@@ -747,3 +747,106 @@ img, svg { display: block; max-width: 100%; }
   color: var(--lilac);
 }
 .testimonial-session { order: 0; }
+
+/* ---------- Events ---------- */
+
+.events { background: var(--lilac-pale); }
+
+.events-heading {
+  padding: clamp(28px, 3vw, 44px) var(--pad) 0;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(32px, 3.4vw, 52px);
+  line-height: 1;
+}
+
+.event {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(28px, 4vw, 64px);
+  padding: clamp(24px, 3vw, 44px) var(--pad) clamp(48px, 5vw, 80px);
+}
+.event + .event { border-top: 1px solid var(--hairline); }
+
+.event-poster { display: block; background: var(--lilac); }
+.event-poster img { width: 100%; height: auto; }
+
+.event-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.event-title {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(40px, 4.6vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+}
+
+.event-tagline {
+  font-size: clamp(18px, 1.5vw, 22px);
+  line-height: 1.5;
+}
+
+.event-speakers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.event-speakers li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+}
+.event-speaker {
+  font-family: var(--display);
+  font-size: clamp(22px, 1.9vw, 28px);
+  line-height: 1.1;
+}
+.event-school {
+  padding: 4px 12px;
+  border: 1.5px solid var(--plum);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.event-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  width: 100%;
+  margin: 8px 0 0;
+  border-top: 1.5px solid var(--plum);
+}
+.event-facts div {
+  padding: 14px 16px 14px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.event-facts dt {
+  margin-bottom: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+.event-facts dd {
+  margin: 0;
+  font-size: clamp(18px, 1.5vw, 22px);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.event-note { font-size: 17px; }
+
+@media (max-width: 760px) {
+  .event { grid-template-columns: 1fr; }
+  .event-facts { grid-template-columns: 1fr; }
+}
