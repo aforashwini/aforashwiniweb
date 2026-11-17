@@ -314,6 +314,17 @@ export const oneToOne = {
         'As an MBA applicant, I was struggling to craft a cohesive 90 second introduction that truly reflected who I am. That’s when I found Ashwini through her contents. She was warm and approachable from the start, making the session feel incredibly comfortable. She listened attentively, helped me find clarity in my story, and ensured my authenticity remained intact which was very important to me. I left the session feeling much more confident in how I present myself. Truly grateful for her guidance!',
       ],
     },
+    {
+      name: 'Anonymous',
+      session: '“About Me” Session',
+      highlight: 'She’s a fantastic listener with a knack for drawing out what makes you interesting, even the things you forget are interesting about yourself.',
+      preview: 3,
+      paragraphs: [
+        'I’d wholeheartedly recommend Ashwini for interview prep. She’s a fantastic listener with a knack for drawing out what makes you interesting, even the things you forget are interesting about yourself.',
+        'While I was preparing for my BCG interview, she helped me turn the surprisingly difficult question “Tell me about yourself” into a clear, compelling story that actually sounded like me. She was a thoughtful sounding board, helped my personality shine through, and shared practical tips for steering conversations with senior leaders without forgetting how to be a human.',
+        'I left our conversations with sharper answers, more confidence, and considerably fewer existential questions. I can’t recommend her enough.',
+      ],
+    },
   ],
 };
 
