@@ -305,6 +305,15 @@ export const oneToOne = {
         'Definitely recommend making this investment for yourself. Whatever stage of life you\'re at, recommend you to book some time with Ashwini and do this exercise with her!',
       ],
     },
+    {
+      name: 'Anonymous',
+      session: '“About Me” Session',
+      highlight: 'I left the session feeling much more confident in how I present myself.',
+      preview: 1,
+      paragraphs: [
+        'As an MBA applicant, I was struggling to craft a cohesive 90 second introduction that truly reflected who I am. That’s when I found Ashwini through her contents. She was warm and approachable from the start, making the session feel incredibly comfortable. She listened attentively, helped me find clarity in my story, and ensured my authenticity remained intact which was very important to me. I left the session feeling much more confident in how I present myself. Truly grateful for her guidance!',
+      ],
+    },
   ],
 };
 
